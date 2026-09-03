@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useShop } from "@/context/shop-context";
 import { ORDERS } from "@/data/orders";
-import type { ViewKey } from "./types";
+import type   { ViewKey } from "./types";
 import SidebarTabs from "./components/sidebar-tabs";
 import Overview from "./components/over-view";
 import OrdersList from "./components/orders-list";
