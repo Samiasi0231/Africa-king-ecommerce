@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jost";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Brand tokens, mapped to shadcn's standard variable names so ui/ components
+   (button, input, card, etc.) pick them up automatically. */
+:root {
+  --radius: 0.25rem;
+
+  --background: #faf8f3; /* cream */
+  --foreground: #101317; /* near-black */
+
+  --card: #ffffff;
+  --card-foreground: #101317;
+
+  --popover: #ffffff;
+  --popover-foreground: #101317;
+
+  --primary: #2e4057; /* navy */
+  --primary-foreground: #f4f0e8;
+
+  --secondary: #f1ede4; /* warm cream */
+  --secondary-foreground: #101317;
+
+  --muted: #f1ede4;
+  --muted-foreground: #7a756b;
+
+  --accent: #f1ede4;
+  --accent-foreground: #101317;
+
+  --destructive: #c08a6a;
+  --destructive-foreground: #ffffff;
+
+  --border: rgba(16, 19, 23, 0.14);
+  --input: rgba(16, 19, 23, 0.24);
+  --ring: #2e4057;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* House display serif, loaded via Google Fonts link in index.html */
+  --font-serif: "Bodoni Moda", ui-serif, Georgia, serif;
+  --font-sans: "Inter Variable", Inter, "Jost", Helvetica, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+}
