@@ -1,6 +1,6 @@
 import { Select } from "@/components/ui/select";
 import { CATALOGUE } from "@/data/catalogue";
-import type { SortKey } from "../types";
+import type { SortKey } from "../catalogue/types";
 
 interface SortBarProps {
   resultCount: number;
